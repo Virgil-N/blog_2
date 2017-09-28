@@ -1,0 +1,50 @@
+#header {
+    display: none;
+    height: 55px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    border: 1px solid #eef2f8;
+    color: #88909a;
+    z-index: 20;
+    -webkit-transition: -webkit-transform .25s ease-in-out;
+    background-color: white;
+    #btn-open-sidebar {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+    }
+    .header-title {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 55px;
+        margin: 0;
+        a {
+            color: #88909a;
+            font-weight: 400;
+        }
+    }
+    .header-right-block {
+        display: block;
+        position: absolute;
+        top: 12.5px;
+        right: 20px;
+        color: #88909a;
+        a {
+            display: block;
+            .header-right-img {
+                display: block;
+                width: 30px;
+                height: 30px;
+                border-radius: 15px;
+            }
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        & {
+            display: block;
+        }
+    }
+}
+

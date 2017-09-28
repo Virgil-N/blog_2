@@ -1,0 +1,1 @@
+{"version":3,"sources":["home.js"],"names":["jQuery"],"mappings":"AAYGA","file":"home.js","sourcesContent":["(function($) {\r\n\r\n    function init() {\r\n\r\n    }\r\n\r\n    function bindEvent() {\r\n        \r\n    }\r\n\r\n    init();\r\n    bindEvent();\r\n})(jQuery);"]}

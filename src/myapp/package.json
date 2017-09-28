@@ -1,0 +1,19 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "entry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "samete",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass-china": "^3.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.1.2"
+  }
+}

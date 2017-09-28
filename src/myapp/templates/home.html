@@ -1,0 +1,84 @@
+{{define "home"}}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>主页</title>
+    <link rel="stylesheet" type="text/css" href="/css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <script type="text/javascript" src="/vendor/jQuery/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div id="main-wrap">
+        {{template "header"}}
+        {{template "sidebar"}}
+        <div id="main">
+            <section id="main-content">
+                <div class="articles">
+                    {{range $k, $v :=.}}
+                        {{if eq $k 0}}
+                            <article class="first-article">
+                                <div class="article-wrap">
+                                    <a href="/getArticle?articleId={{.id}}">
+                                        <img src={{.banner_url}} class="banner-img">
+                                    </a>
+                                    <h1>
+                                        <a href="/getArticle?articleId={{.id}}" class="title">{{.title}}</a>
+                                    </h1>
+                                    <div class="article-meta">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <span class="author-name">{{.name}}</span>
+                                        <i class="fa fa-tag" aria-hidden="true"></i>
+                                        <span class="category">{{.category}}</span>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        <time>{{.created}}</time>
+                                    </div>
+                                    <div class="text">
+                                        <p>{{.content}}</p>
+                                    </div>
+                                    <div class="continue-reading">
+                                        <a href="/getArticle?articleId={{.id}}">继续阅读</a>
+                                    </div> 
+                                </div>
+                            </article>
+                        {{else}}
+                            <article class="normal-article">
+                                <div class="normal-article-wrap clearfix">
+                                    <div class="normal-banner">
+                                        <a href="/getArticle?articleId={{.id}}">
+                                            <img src={{.banner_url}}>
+                                        </a>
+                                    </div>
+                                    <div class="normal-text-wrap">
+                                        <h1>
+                                            <a href="/getArticle?articleId={{.id}}" class="title">{{.title}}</a>
+                                        </h1>
+                                        <div class="article-meta">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <span class="author-name">{{.name}}</span>
+                                            <i class="fa fa-tag" aria-hidden="true"></i>
+                                            <span class="category">{{.category}}</span>
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            <time>{{.created}}</time>
+                                        </div>
+                                        <div class="text">
+                                            <p>{{.content}}</p>
+                                        </div>
+                                        <div class="continue-reading">
+                                            <a href="/getArticle?articleId={{.id}}">继续阅读</a>
+                                        </div> 
+                                    </div>
+                                </div>
+                                
+                            </article>
+                        {{end}}
+                    {{end}}
+                </div>
+            </section>
+            {{template "footer"}}
+        </div>
+    </div>
+    
+    <!-- <script type="text/javascript" src="/javascript/home.js"></script> -->
+</body>
+</html>
+{{end}}

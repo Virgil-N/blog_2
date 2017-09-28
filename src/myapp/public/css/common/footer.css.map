@@ -1,0 +1,1 @@
+{"version":3,"sources":["footer.css"],"names":[],"mappings":"AAAA,QACE,kBAAmB,AACnB,gBAAiB,AACjB,YAAa,AACb,YAAc,CAAE,AAChB,aACE,cAAe,AACf,eAAkB,CAAE","file":"footer.css","sourcesContent":["#footer {\n  text-align: center;\n  margin-top: 70px;\n  height: auto;\n  padding: 20px; }\n  #footer span {\n    color: #9eabb3;\n    font-size: 0.8rem; }\n"]}
