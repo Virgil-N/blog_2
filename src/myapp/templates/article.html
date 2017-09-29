@@ -14,24 +14,21 @@
         <div id="main">
             <section id="main-content">
                 <div class="article">
-                    <article>
-                        <h1>标题</h1>
-                        <a href="javascript:;">
-                            <img src={{.Banner_url}} class="banner-img">
-                        </a>
-                        <h1>
-                            <a href="javascript:;" class="title">{{.title}}</a>
-                        </h1>
-                        <div class="article-meta">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            <span class="author-name">{{.name}}</span>
-                            <i class="fa fa-tag" aria-hidden="true"></i>
-                            <span class="category">{{.category}}</span>
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                            <time>{{.created}}</time>
-                        </div>
-                        <div class="text">
-                            <p>{{.content}}</p>
+                    <article class="article-detail">
+                        <div class="article-wrap">
+                            <img src={{.BannerUrl}} class="banner-img">
+                            <h1 class="title">{{.Title}}</h1>
+                            <div class="article-meta">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="author-name">{{.AuthorName}}</span>
+                                <i class="fa fa-tag" aria-hidden="true"></i>
+                                <span class="category">{{.Category}}</span>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <time>{{.Created}}</time>
+                            </div>
+                            <div class="text">
+                                <p>{{.Content}}</p>
+                            </div>
                         </div>
                     </article>
                 </div>

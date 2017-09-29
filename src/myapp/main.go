@@ -16,6 +16,7 @@ func main() {
 	http.Handle("/vendor/", http.FileServer(http.Dir("public")))
 
 	r.HandleFunc("/", controllers.GetHome)
+	r.HandleFunc("/home", controllers.GetHome)
 	r.HandleFunc("/getArticle", controllers.GetArticle)
 
 	http.Handle("/", r)

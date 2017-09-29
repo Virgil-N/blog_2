@@ -8,11 +8,9 @@
     function bindEvent() {
         $('body')
         // 点击页面上的空白区域隐藏sidebar
-        .on('click', '#main-content, #header', function(e) {
+        .on('click', '#main-content, #header, #footer', function(e) {
 
             // 判断点击的元素和其祖先元素是否是超链接，当不是超链接时才执行
-
-            console.log($(e.target).closest('a')[0] !== undefined);
             if (!(e.target.tagName === 'A') && !($(e.target).closest('a')[0] !== undefined)) {
                 var $sidebar = $('#sidebar');
                 var $sidebarLeft = parseInt($sidebar.css('left'));
@@ -33,7 +31,7 @@
                         // width: $pageWidth
                     }, 'normal');
 
-                    $('#header').animate({
+                    $('#header, #footer').animate({
                         marginLeft: 0
                     }, 'normal');
 
@@ -63,7 +61,7 @@
                     marginLeft: 250
                 }, 'normal');
 
-                $('#header').animate({
+                $('#header, #footer').animate({
                     marginLeft: 250
                 }, 'normal');
 
@@ -77,7 +75,7 @@
                     marginLeft: 0
                 }, 'normal');
 
-                $('#header').animate({
+                $('#header, #footer').animate({
                     marginLeft: 0
                 }, 'normal');
 
@@ -95,7 +93,6 @@
             
             // 233是带滚动条的sidebar宽度
             if ($pageWidth < 767 && $sidebarLeft === 0 && ($sidebarWidth === 250 || $sidebarWidth === 233)) {
-                console.log($sidebarWidth);
                 $('#sidebar').animate({
                     left: -250
                 }, 'normal');
@@ -104,7 +101,7 @@
                     marginLeft: 0
                 }, 'normal');
 
-                $('#header').animate({
+                $('#header, #footer').animate({
                     marginLeft: 0
                 }, 'normal');
             }
