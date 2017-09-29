@@ -29,8 +29,8 @@ func GetHome(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	defer session.Close()
-
-	res, err := rt.DB("blog").Table("article").Filter("").Run(session)
+	// 升降序是个问题，目前只能使用数据库默认的设置
+	res, err := rt.DB("blog").Table("article").Filter("").OrderBy("created").Run(session)
 	if err != nil {
 		panic(err)
 		return

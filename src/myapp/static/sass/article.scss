@@ -12,10 +12,10 @@
         height: 100%;
         box-sizing: border-box;
         display: block;
-        overflow-y: auto;
+        // overflow-y: auto;
         .article {
             padding: 0 20px;
-            overflow: auto;
+            // overflow: auto;
             article {
                 padding-bottom: 2rem;
             }
@@ -44,7 +44,7 @@
                     }
                 }
                 .banner-img {
-                    width: 100%;
+                    // width: 100%;
                     max-width: 750px;
                     height: 250px;
                 }
@@ -53,10 +53,7 @@
                     margin: 20px auto;
                     text-indent: 2rem;
                     p {
-                        height: 4.2rem;
                         line-height: 1.4rem;
-                        overflow: hidden;
-                        position: relative;
                         color: #5d686f;
                     }
                 }

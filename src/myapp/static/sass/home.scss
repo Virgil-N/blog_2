@@ -12,10 +12,10 @@
         height: 100%;
         box-sizing: border-box;
         display: block;
-        overflow-y: auto;
+        // overflow-y: auto;
         .articles {
             padding: 0 20px;
-            overflow: auto;
+            // overflow: auto;
             article {
                 padding-bottom: 2rem;
             }
@@ -49,7 +49,7 @@
                     }
                 }
                 .banner-img {
-                    width: 100%;
+                    // width: 100%;
                     max-width: 750px;
                     height: 250px;
                 }
